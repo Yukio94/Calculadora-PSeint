@@ -3,6 +3,7 @@ Algoritmo Calculadora
 	op <- 0
 	res <- 0
 	dato <- 0
+	salir <- Falso
 	Repetir
 		Escribir 'Calculadora geométrica'
 		Escribir 'Ingresa una operacion a realizar'
@@ -18,7 +19,15 @@ Algoritmo Calculadora
 		Leer op
 		Según op Hacer
 			0:
+				Escribir 'Autor Yukio Quiroz'
+				Escribir 'Escuela'
+				Escribir 'Universidad Virtual de Guanajuato'
+				Escribir 'Materia'
+				Escribir 'Programación Basica B1'
+				Escribir 'Asesor'
+				Escribir 'Luz Elena'
 				Escribir 'Cerrando programa'
+				salir <- Verdadero
 			1:
 				Repetir
 					Escribir 'Suma'
@@ -27,7 +36,7 @@ Algoritmo Calculadora
 					Repetir
 						Escribir 'Ingresa el siguiente valor'
 						Leer dato
-						res <- +dato
+						res <- res+dato
 						Escribir 'Ingresa 1 para añadir otro dato'
 						Leer op
 					Hasta Que op<>1
@@ -45,7 +54,7 @@ Algoritmo Calculadora
 					Repetir
 						Escribir 'Ingresa el siguiente valor'
 						Leer dato
-						res <- -dato
+						res <- res-dato
 						Escribir 'Ingresa 1 para añadir otro dato'
 						Leer op
 					Hasta Que op<>1
@@ -163,17 +172,17 @@ Algoritmo Calculadora
 							res <- dato*2
 							Escribir 'Escribe la madida restante'
 							Leer dato
-							res <- +dato
+							res <- res+dato
 							Escribir 'El resultado es: ', res
 						3:
 							Escribir 'Escribe la longitud 1'
 							Leer res
 							Escribir 'Escribe la longitud 2'
 							Leer dato
-							res <- +dato
+							res <- res+dato
 							Escribir 'Escribe la longitud 3'
 							Leer dato
-							res <- +dato
+							res <- res+dato
 							Escribir 'El resultado es: ', res
 						De Otro Modo:
 							Escribir 'Datos no validos'
@@ -200,5 +209,5 @@ Algoritmo Calculadora
 			De Otro Modo:
 				Escribir 'Opcion no valida'
 		FinSegún
-	Hasta Que op==0
+	Hasta Que salir==Verdadero
 FinAlgoritmo
